@@ -14,7 +14,7 @@ const Countries = () => {
 
 
     return (
-        <div >
+        <div>
             <h3>Countries: {countries.length}</h3>
             <div className="country-container">
                 {
