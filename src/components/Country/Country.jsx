@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './Country.css'
-const Country = ({ country, handleVisitedCountry }) => {
+const Country = ({ country, handleVisitedCountry, handleVisitedFlags }) => {
 
     const { name, flags, population, area, cca3 } = country;
     const [visited, setVisited] = useState(false);
@@ -19,6 +19,8 @@ const Country = ({ country, handleVisitedCountry }) => {
             <h3>Area: {area}</h3>
             <p><small>Code: {cca3}</small></p>
             <button onClick={passWithParams}>Mark Visited</button>
+            <br></br>
+            <button onClick={() => handleVisitedFlags(country.flags)}>Add Flag</button>
             <br></br>
             <button onClick={handleVisited}>{visited ? 'Visited' : 'Going'}</button>
             {
